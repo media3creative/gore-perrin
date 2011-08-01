@@ -1470,7 +1470,7 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   position: relative;
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
   font-family: "EmbedFont-1";
   font-size: 32px;
   z-index: 11;
