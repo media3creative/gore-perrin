@@ -1,30 +1,13 @@
-- @sitename = "Site Name"
+- @sitename = "Roof Troops"
 
 // MAIN NAVIGATION
 - @link1 = ["Home", "/home"]
-- @link2 = ["About", "/page2"]
-- @link3 = ["Services", "/page3"]
+- @link2 = ["About", "/about"]
+- @link3 = ["Services", "/services"]
 - @link4 = ["Gallery", "/gallery"]
-- @link5 = ["Contact", "/page5"]
+- @link5 = ["Contact", "/contact"]
 
-// FOOTER LINKS
-- @linkA1 = ["link name", "/path"]
-- @linkA2 = ["link name", "/path"]
-- @linkA3 = ["link name", "/path"]
-- @linkA4 = ["link name", "/path"]
-- @linkA5 = ["link name", "/path"]
 
-- @linkB1 = ["link name", "/path"]
-- @linkB2 = ["link name", "/path"]
-- @linkB3 = ["link name", "/path"]
-- @linkB4 = ["link name", "/path"]
-- @linkB5 = ["link name", "/path"]
-
-- @linkC1 = ["link name", "/path"]
-- @linkC2 = ["link name", "/path"]
-- @linkC3 = ["link name", "/path"]
-- @linkC4 = ["link name", "/path"]
-- @linkC5 = ["link name", "/path"]
 
 !!! 5
 %html
@@ -40,16 +23,11 @@
 
     %link{:href => "stylesheets/font-face.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "stylesheets/stylesheet.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "stylesheets/header.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "stylesheets/image-slider.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "stylesheets/footer.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
 
     %script{:type => "text/javascript", :src => "javascripts/respond.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/jquery-1.5.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/modernizr-1.6.min.js"}
     %script{:type => "text/javascript", :src => "javascripts/application.js"}
-    %script{:type => "text/javascript", :src => "javascripts/jquery.hoverIntent.minified.js"}
-    %script{:type => "text/javascript", :src => "javascripts/jquery.nivo.slider.pack.js"}
 
     // MOBILE FOOTER FIX
     :javascript
@@ -70,177 +48,33 @@
       <link rel="stylesheet" type="text/css" href="/stylesheets/all-ie-only.css" />
 
           
-    // NIVO SLIDER
-    :javascript
-      $(window).load(function() {
-          $('#slider').nivoSlider({
-                  effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
-                  slices: 15, // For slice animations
-                  boxCols: 19, // For box animations
-                  boxRows: 8, // For box animations
-                  animSpeed: 600, // Slide transition speed
-                  pauseTime: 6000, // How long each slide will show
-                  startSlide: 0, // Set starting Slide (0 index)
-                  directionNav: true, // Next & Prev navigation
-                  directionNavHide: true, // Only show on hover
-                  controlNav: true, // 1,2,3... navigation
-                  controlNavThumbs: false, // Use thumbnails for Control Nav
-                  controlNavThumbsFromRel: false, // Use image rel for thumbs
-                  controlNavThumbsSearch: '.jpg', // Replace this with...
-                  controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
-                  keyboardNav: true, // Use left & right arrows
-                  pauseOnHover: true, // Stop animation while hovering
-                  manualAdvance: false, // Force manual transitions
-                  captionOpacity: 1.0, // Universal caption opacity
-                  prevText: 'Back', // Prev directionNav text
-                  nextText: 'Next', // Next directionNav text
-                  beforeChange: function(){}, // Triggers before a slide transition
-                  afterChange: function(){}, // Triggers after a slide transition
-                  slideshowEnd: function(){}, // Triggers after all slides have been shown
-                  lastSlide: function(){}, // Triggers when last slide is shown
-                  afterLoad: function(){} // Triggers when slider has loaded
-              });
-      });
-    
-    
-    // DROPDOWN MENU  
-    / :javascript
-    /   $(document).ready(function() {
-    / 
-    / 
-    /     function megaHoverOver(){
-    /       $(this).find(".sub").stop().fadeTo('fast', 1).show();
-    / 
-    /       //Calculate width of all ul's
-    /       (function($) { 
-    /         jQuery.fn.calcSubWidth = function() {
-    /           rowWidth = 0;
-    /           //Calculate row
-    /           $(this).find("ul").each(function() {          
-    /             rowWidth += $(this).width(); 
-    /           }); 
-    /         };
-    /       })(jQuery); 
-    / 
-    /       if ( $(this).find(".row").length > 0 ) { //If row exists...
-    /         var biggestRow = 0; 
-    /         //Calculate each row
-    /         $(this).find(".row").each(function() {                 
-    /           $(this).calcSubWidth();
-    /           //Find biggest row
-    /           if(rowWidth > biggestRow) {
-    /             biggestRow = rowWidth;
-    /           }
-    /         });
-    /         //Set width
-    /         $(this).find(".sub").css({'width' :biggestRow});
-    /         $(this).find(".row:last").css({'margin':'0'});
-    / 
-    /       } else { //If row does not exist...
-    / 
-    /         $(this).calcSubWidth();
-    /         //Set Width
-    /         $(this).find(".sub").css({'width' : rowWidth});
-    / 
-    /       }
-    /     }
-    / 
-    /     function megaHoverOut(){ 
-    /       $(this).find(".sub").stop().fadeTo('fast', 0, function() {
-    /         $(this).hide(); 
-    /       });
-    /     }
-    / 
-    / 
-    /     var config = {    
-    /        sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)    
-    /        interval: 100, // number = milliseconds for onMouseOver polling interval    
-    /        over: megaHoverOver, // function = onMouseOver callback (REQUIRED)    
-    /        timeout: 00, // number = milliseconds delay before onMouseOut    
-    /        out: megaHoverOut // function = onMouseOut callback (REQUIRED)    
-    /     };
-    / 
-    /     $("ul#topnav li .sub").css({'opacity':'0'});
-    /     $("ul#topnav li").hoverIntent(config);
-    / 
-    / 
-    / 
-    /   });
-
-
-  
-
-
   %body{:class => @body_class}
+    = yield :background
     #header
-      .center
-        #logo1
-          %a{:href => @link1[1]}
-            %img{:src => "/images/logo.png", :alt => ""+@sitename+" Logo"}
-        %ul#topnav
-          %li
-            %a#one.topnav{:href => @link1[1]}
-              =@link1[0]
-          %li
-            %a#two.topnav{:href => @link2[1]}
-              =@link2[0]
-            .sub
-              %ul
-                / / %li
-                / /   %h2 Header
-                / %li
-                /   %a{:href => "#"} Navigation Link
-                / %li
-                /   %a{:href => "#"} Navigation Link
-                / %li
-                /   %a{:href => "#"} Navigation Link
-          %li
-            %a#three.topnav{:href => @link3[1]}
-              =@link3[0]
-          %li
-            %a#four.topnav{:href => @link4[1]}
-              =@link4[0]
-          %li
-            %a#five.topnav{:href => @link5[1]}
-              =@link5[0]
+      #logo1
+        %a{:href => @link1[1]}
+          %img{:src => "/images/logo.png", :alt => ""+@sitename+" Logo"}
+      %ul#topnav
+        %li
+          %a#one.topnav{:href => @link1[1]}
+            =@link1[0]
+        %li
+          %a#two.topnav{:href => @link2[1]}
+            =@link2[0]
+        %li
+          %a#three.topnav{:href => @link3[1]}
+            =@link3[0]
+        / %li
+        /   %a#four.topnav{:href => @link4[1]}
+        /     =@link4[0]
+        %li
+          %a#five.topnav{:href => @link5[1]}
+            =@link5[0]
 
 
     .content
       = yield
-    #footer
-      .center
-        .content
-          &nbsp;
-          .column
-            %h4 Group One
-            %a{:href => @linkA1[1]}
-              =@linkA1[0]
-            %a{:href => @linkA2[1]}
-              =@linkA2[0]
-            %a{:href => @linkA3[1]}
-              =@linkA3[0]
-            %a{:href => @linkA4[1]}
-              =@linkA4[0]
-          .column
-            %h4 Group Two
-            %a{:href => @linkB1[1]}
-              =@linkB1[0]
-            %a{:href => @linkB2[1]}
-              =@linkB2[0]
-            %a{:href => @linkB3[1]}
-              =@linkB3[0]
-            %a{:href => @linkB4[1]}
-              =@linkB4[0]
-          .column
-            %h4 Group Three
-            %a{:href => @linkC1[1]}
-              =@linkC1[0]
-            %a{:href => @linkC2[1]}
-              =@linkC2[0]
-            %a{:href => @linkC3[1]}
-              =@linkC3[0]
-            %a{:href => @linkC4[1]}
-              =@linkC4[0]  
+
               
                   
     .m3c-bar
@@ -252,8 +86,3 @@
           Powered by [Media 3 Creative](http://media3creative.com/)
           
           
-          
-          
-          
-          <script type="text/javascript" src="http://use.typekit.com/mig2hwk.js"></script>
-          <script type="text/javascript">try{Typekit.load();}catch(e){}</script>

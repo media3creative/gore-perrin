@@ -4,8 +4,6 @@
 @import portrait
 @import landscape
 @import mobile-480
-@import partials/m3c-bar
-//@import partials/navmenu
 
 // Media queries for responsive design
 // These follow after primary styles so they will successfully override
@@ -32,9 +30,188 @@ body
 	padding: 0
 	background: $body-bg
 
+#one.bg1
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 100%
+	background: url(/images/bg_1.jpg) no-repeat top center scroll
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+#two.bg1
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 100%
+	background: url(/images/bg_2.jpg) no-repeat top center scroll
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+#four.bg1
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 100%
+	background: url(/images/bg_4.jpg) no-repeat top center scroll
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+#five.bg1
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 100%
+	background: url(/images/bg_5.jpg) no-repeat top center scroll
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+
+#header
+	@extend .box
+	width: 100%
+	height: $header-height
+	margin: 0
+	padding: 0
+	#logo1
+		@extend .box
+		position: absolute
+		top: $v-gap
+		left: ($h-gap)
+		margin: 0
+		a
+			display: block
+			margin: 0
+			padding: 0
+			&:hover
+				@extend .opaque
+			img
+				width: $logoW
+				height: $logoH
+				margin: 0
+				padding: 0
+				border: 0
+				background: transparent
+	ul#topnav
+		@extend .box
+		position: absolute
+		right: 0
+		top: ($v-gap * 2)
+		width: 600px
+		margin: 0
+		padding: ($v-gap / 2)
+		background: #000
+		border-left: ($corner-radius) solid $primary
+		li
+			display: inline
+			a
+				font-family: "EmbedFont-1"
+				display: inline
+				margin: 0 10px
+				padding: 5px
+				color: #fff
+				font-size: 18px
+				text-transform: uppercase
+				&:hover
+					color: $primary
+					text-decoration: none
+
+body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a#three
+	color: $primary !important
+	text-decoration: none !important
+
+
 .content
 	@extend .box
+	@extend .clearfix
 	position: relative
 	width: 100%
 	margin: 0
+	padding: 0 0 $v-gap 0
+	
+.page-content
+	@extend .box
+	@extend .clearfix
+	position: relative
+	left: 0
+	width: 550px
+	margin: 0
 	padding: 0
+	padding-top: ($logoH * 1)
+	background: transparent
+	.page-title
+		position: relative
+		margin: 0
+		padding: 0 $v-gap 1px $h-gap
+		color: #000
+		background: transparent
+		h1
+			position: relative
+			margin: 0
+			padding: 0
+			color: #fff
+			font-family: "EmbedFont-1"
+			font-size: 32px
+			z-index: 11
+	.page-body
+		@extend .opaque
+		position: relative
+		margin: 0
+		padding: 10px $v-gap 10px $h-gap
+		background: $primary
+		p
+			@extend .font-trebuchet
+			margin: 0 0 1em 0
+			padding: 0
+			color: #fff
+			font-size: 12px
+			font-weight: 100
+			&:last-child
+				margin-bottom: 0
+			
+.m3c-bar			
+	@extend .font-helvetica
+	position: fixed
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 20px
+	+clearfix
+	color: $m3c-text
+	background: $m3c-bg
+	font-size: 9px
+	font-weight: 200
+	text-transform: uppercase
+	line-height: 1.4em
+	letter-spacing: 1px
+	border-top: 1px solid $m3c-border
+	z-index: 100
+	.copyright
+		+float-left
+		padding-left: 50px
+		margin: 3px 0 0 0
+		p
+			font-size: 9px
+			color: $m3c-text
+	.powered-by
+		+float-right
+		padding-right: 50px
+		margin: 3px 0 0 0
+		p
+			font-size: 9px
+			color: $m3c-text
+	a
+		color: $m3c-link
+		text-decoration: none
+		&:hover
+			color: $m3c-link-hover
+			border-bottom: 0px solid $line-color
+			text-decoration: none

@@ -7,12 +7,6 @@
 @import partials/typography
 @import color
 
-$base-font-size: 14px
-$base-link-color: #aaa
-$base-link-color-hover: lighten($base-link-color,10)
-$base-form-text-color: #444
-$webkit-tap-highlight-color: #59bef2
-$invalid-box-shadow-color: red
 
 // Links
 a
@@ -118,13 +112,7 @@ input, select, textarea
 input:valid, textarea:valid
   // Set valid styles here
 
-input:invalid, textarea:invalid
-  +border-radius(1px)
-  +box-shadow($invalid-box-shadow-color, 0px, 0px, 5px)
 
-.no-boxshadow
-  input:invalid, textarea:invalid
-    background-color: lighten($invalid-box-shadow-color,42)
 
 // These selection declarations have to be separate
 // No text-shadow: twitter.com/miketaylr/status/12228805301
@@ -138,8 +126,6 @@ input:invalid, textarea:invalid
 
 // j.mp/webkit-tap-highlight-color
 
-a:link
-  -webkit-tap-highlight-color: $webkit-tap-highlight-color
 
 // Make buttons play nice in IE:
 // www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
@@ -158,8 +144,6 @@ button
 
 select, input, textarea
   // #444 looks better than black: twitter.com/H_FJ/statuses/11800719859
-  color: $base-form-text-color
   // Set your base font here, to apply evenly
   font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif
-  font-size: $base-font-size
 

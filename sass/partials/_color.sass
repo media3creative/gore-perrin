@@ -3,11 +3,11 @@
 @import compass/css3
 
 // COLOR DEFINITIONS
-$primary: #003461
+$primary: #8dc63f
 $primary-light: lighten(adjust-hue($primary, 0%), +20)
 //$primary-light: #0a65b4
 $primary-dark: darken($primary, +5)
-$secondary: #d8a41c
+$secondary: #000
 //$secondary-light: lighten(adjust-hue($secondary, 0%), +10)
 $secondary-light: #ebd716
 $secondary-dark: darken($secondary, +5)
@@ -22,13 +22,13 @@ $gray-light: #efefef
 
 
 // COLOR APPLICATION
-$html-bg:									#efefef
+$html-bg:									transparent
 $body-bg:									$html-bg
 $center-container-bg:			#fff
 
 $text-dark:								#000
 $text-light:							$gray-med
-$text-highlight:					$apple-highlight
+$text-highlight:					#efefef
 
 $header-title:						#fff
 $header-text:							#fff
@@ -121,5 +121,7 @@ $opacity-pc:							($opacity*100)			// DO NOT CHANGE, IS UPDATED BY LINE ABOVE
 // CURSOR HIGHLIGHTING
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, b::selection, a::selection
 	background: $text-highlight
+	color: #000
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, b::-moz-selection, a::-moz-selection
 	background: $text-highlight
+	color: #000

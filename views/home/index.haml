@@ -2,49 +2,14 @@
 - @subtitle = ""
 - @body_class = "one"
 
-%link{:href => "stylesheets/body-1.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+- content_for :background do
+  #one.bg1
 
-#one.image-slider
-  .center
-    #slider-wrapper
-      #slider.nivoSlider
-        %img{:alt => "", :src => "/images/nivo/banner-1-1.jpg", :title => "#caption1"}/
-        %img{:alt => "", :src => "/images/nivo/banner-1-2.jpg", :title => "#caption2"}/
-        %img{:alt => "", :src => "/images/nivo/banner-1-2.jpg", :title => "#caption3"}/
-      #caption1.nivo-html-caption
-        %h1 Slide 1: A clever title.
-        %h3 This is the first impact image the user will see. A brief description of the slide is included to inform the user.
-        %p.link
-          = link_to "Learn More", "/page2"
-      #caption2.nivo-html-caption
-        %h1 Slide 2: Spark an interest.
-        %h3 This slide will feature a product or service that really gets the user interested in the company. Supplemental text prompts the user to act, such as purchasing or reading more.
-        %p.link
-          = link_to "Buy Now", "/page3"
-      #caption3.nivo-html-caption
-        %h1
-          Slide 3: Example of a
-          %br/
-          multi-line descriptive headline
-        %h3 The third slide is much like the second&mdash;it showcases a special aspect of the company. Additional slides may be added.
-        %p.link
-          = link_to "Learn How", "/page4" 
-
-.body
-  .center
-    .content
-      #one.left
-        %a.container{:href => "/page2"}
-          %h1 About Us
-          %h3 Interest-grabber that talks about the company
-          %p.link Learn More  >
-      #one.middle
-        %a.container{:href => "/page3"}
-          %h1 Featured Service
-          %h3 Highlights a key product or service
-          %p.link Discover  >
-      #one.right
-        %a.container{:href => "/page4"}
-          %h1 Sample Gallery
-          %h3 View photos of our products and services
-          %p.link Get Started  >
+#one.page-content
+  .page-title
+    %h1 We're on top of it
+  .page-body
+    %p Roof Troops is a full-service roofing and remodeling company that specializes in roofing, and all exterior and interior renovations for commercial and residential projects. Our team understands the aspects of construction, and we bring skill, product knowledge and creativity to all projects, large or small.
+    
+    %p By blending an eye for design with craftsmanship, we are able to make the dreams you have for your living space take form. Our excellent client communication, careful planning and designing produce successful projects and satisfied customers that stand the test of time.
+  
