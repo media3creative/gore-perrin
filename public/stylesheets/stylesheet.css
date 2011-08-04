@@ -1473,6 +1473,7 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   color: white;
   font-family: "EmbedFont-1";
   font-size: 32px;
+  text-shadow: 2px 2px 5px black;
   z-index: 11;
 }
 .page-content .page-body {
