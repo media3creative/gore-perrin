@@ -1485,7 +1485,7 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
 .page-content .page-body p {
   margin: 0 0 1em 0;
   padding: 0;
-  color: white;
+  color: black;
   font-size: 12px;
   font-weight: 100;
 }
