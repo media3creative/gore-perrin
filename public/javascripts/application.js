@@ -13,23 +13,11 @@ function ipadFunc(){
 		//window.location.reload(true);
 		//alert(parseInt($("window").css("height")))
 		//alert(window.orientation)
-		if( parseInt($(".content-container").css("height")) > 600
-		&& (window.orientation == 90 ||  window.orientation == -90)
-		){
-			$(".bg1").css(
-				{"height": parseInt($(".content-container").css("height"))+ 150 +"px"}
+	
+			$(".bg1, .bg2").css(
+				{"height": parseInt($(".content").css("height"))+ 600 +"px"}
 				);
-			$(".bg2").css(
-				{"height": parseInt($(".content-container").css("height"))+ 150 +"px"}
-				);
-		}else{
-				$(".bg1").css(
-					{"height": "100%"}
-					);
-				$(".bg2").css(
-					{"height": "100%"}
-					);
-		}
+	
 	};
 }
 $(window).resize(function() {
@@ -37,3 +25,7 @@ $(window).resize(function() {
 	//alert("tutu")
 	$(currentPage).css("left",middlePoint)
 });
+
+$(document).ready(function () {
+	alert("tutu")
+}

@@ -1,4 +1,4 @@
-- @sitename = "Roof Troops"
+- @sitename = "Christopher T. Gore, Attorney at Law"
 
 // MAIN NAVIGATION
 - @link1 = ["Home", "/home"]
@@ -39,7 +39,7 @@
           navigator.userAgent.match(/iPod/i) ||
           navigator.userAgent.match(/iPad/i)
         ){
-          $('head').append('<link rel="stylesheet" href="/stylesheets/mobile.css" type="text/css" />');
+          $('head').append('<link rel="stylesheet" href="stylesheets/mobile.css" type="text/css" />');
         }
       //}
 
@@ -48,35 +48,7 @@
       <link rel="stylesheet" type="text/css" href="/stylesheets/all-ie-only.css" />
 
           
-  %body{:class => @body_class}
-    = yield :background
-    #header
-      #logo1
-        %a{:href => @link1[1]}
-          %img{:src => "/images/logo.png", :alt => ""+@sitename+" Logo"}
-      %ul#topnav
-        %li
-          %a#one.topnav{:href => @link1[1]}
-            =@link1[0]
-        %li
-          %a#two.topnav{:href => @link2[1]}
-            =@link2[0]
-        %li
-          %a#three.topnav{:href => @link3[1]}
-            =@link3[0]
-        / %li
-        /   %a#four.topnav{:href => @link4[1]}
-        /     =@link4[0]
-        %li
-          %a#five.topnav{:href => @link5[1]}
-            =@link5[0]
-
-
-    .content
-      = yield
-
-              
-                  
+  %body{:class => @body_class, :onorientationchange =>"ipadFunc();"}
     .m3c-bar
       .copyright
         :markdown
@@ -84,5 +56,27 @@
       .powered-by
         :markdown
           Powered by [Media 3 Creative](http://media3creative.com/)
+    = yield :background
+    #logo1
+      %a{:href => @link1[1]}
+        %img{:src => "/images/logo.png", :alt => ""+@sitename+" Logo"}
+    #topnav
+      %a#one{:href => @link1[1]}
+        =@link1[0]
+      %a#two{:href => @link2[1]}
+        =@link2[0]
+      %a#three{:href => @link3[1]}
+        =@link3[0]
+      / %a#four{:href => @link4[1]}
+      /   =@link4[0]
+      %a#five{:href => @link5[1]}
+        =@link5[0]
+
+
+    .content
+      = yield
+
+              
+                  
           
           

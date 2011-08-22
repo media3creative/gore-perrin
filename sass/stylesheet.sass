@@ -25,23 +25,12 @@ html
 	background: $html-bg
 
 body
-	//@extend .bg-gradient-primary
 	margin: 0
 	padding: 0
 	background: $body-bg
+	//overflow: hidden
 
-#one.bg1
-	position: fixed
-	top: 0px
-	left: 0px
-	width: 100%
-	height: 100%
-	background: url(/images/bg_1.jpg) no-repeat top center scroll
-	-webkit-background-size: cover
-	-moz-background-size: cover
-	-o-background-size: cover
-	background-size: cover
-#two.bg1
+#bg1.bg1
 	position: fixed
 	top: 0px
 	left: 0px
@@ -52,7 +41,18 @@ body
 	-moz-background-size: cover
 	-o-background-size: cover
 	background-size: cover
-#four.bg1
+#bg2.bg1
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	height: 100%
+	background: url(/images/bg_1.jpg) no-repeat top center scroll
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+#bg4.bg1
 	position: fixed
 	top: 0px
 	left: 0px
@@ -63,7 +63,7 @@ body
 	-moz-background-size: cover
 	-o-background-size: cover
 	background-size: cover
-#five.bg1
+#bg5.bg1
 	position: fixed
 	top: 0px
 	left: 0px
@@ -75,104 +75,100 @@ body
 	-o-background-size: cover
 	background-size: cover
 
-#header
+
+#logo1
 	@extend .box
-	width: 100%
-	height: $header-height
-	margin: 0
-	padding: 0
-	#logo1
-		@extend .box
-		position: absolute
-		top: $v-gap
-		left: ($h-gap)
+	position: relative
+	margin: $v-gap $h-gap
+	a
 		margin: 0
-		a
-			display: block
+		padding: 0
+		&:hover
+			@extend .opaque
+		img
+			width: $logoW
+			height: $logoH
 			margin: 0
 			padding: 0
-			&:hover
-				@extend .opaque
-			img
-				width: $logoW
-				height: $logoH
-				margin: 0
-				padding: 0
-				border: 0
-				background: transparent
-	ul#topnav
+			border: 0
+			background: transparent
+#topnav
+	@extend .box
+	position: relative
+	width: 110px
+	margin: $v-gap 0 $v-gap 110px
+	//background: #000
+	z-index: 22
+	a
 		@extend .box
-		position: absolute
-		right: 0
-		top: ($v-gap * 2)
-		width: 600px
-		margin: 0
-		padding: ($v-gap / 2)
-		background: #000
-		border-left: ($corner-radius) solid $primary
-		li
-			display: inline
-			a
-				font-family: "EmbedFont-1"
-				display: inline
-				margin: 0 10px
-				padding: 5px
-				color: #fff
-				font-size: 18px
-				text-transform: uppercase
-				&:hover
-					color: $primary
-					text-decoration: none
-
+		font-family: "EmbedFont-1"
+		display: block
+		margin: 4px 0
+		padding: 6px 0 6px 10px
+		color: $nav-text
+		font-size: 13px
+		font-weight: 200
+		text-transform: uppercase
+		text-decoration: none
+		text-shadow: 1px 1px 1px #000
+		border-left: 10px solid transparent
+		&:hover
+			color: $nav-text-hover
+			border-left: 10px solid $primary
+			background: #000
+			
+			
 body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a#three
 	color: $primary !important
 	text-decoration: none !important
+	background: #000
+	border-left: 10px solid $primary
 
 
 .content
 	@extend .box
 	@extend .clearfix
 	position: relative
-	width: 100%
-	margin: 0
-	padding: 0 0 $v-gap 0
+	width: 600px
+	//height: 1200px
+	margin: -160px 0 40px 220px
+	padding: 0
 	
 .page-content
 	@extend .box
 	@extend .clearfix
+	@extend .corner-all
 	position: relative
 	left: 0
-	width: 550px
+	width: 600px
 	margin: 0
-	padding: 0
-	padding-top: ($logoH * 1)
-	background: transparent
+	padding: 15px 25px
+	background: url(/images/nav_bg.png) repeat
+	border: 1px solid #555
 	.page-title
 		position: relative
 		margin: 0
-		padding: 0 $v-gap 1px $h-gap
+		padding: 0
 		color: #000
-		background: transparent
 		h1
 			position: relative
-			margin: 0
+			margin: 0 0 10px 0
 			padding: 0
 			color: #fff
 			font-family: "EmbedFont-1"
 			font-size: 32px
+			text-transform: uppercase
 			text-shadow: 2px 2px 5px #000
 			z-index: 11
 	.page-body
-		@extend .opaque
 		position: relative
 		margin: 0
-		padding: 10px $v-gap 10px $h-gap
-		background: $primary
+		padding: 0
 		p
 			@extend .font-trebuchet
 			margin: 0 0 1em 0
 			padding: 0
-			color: #000
+			color: #fff
 			font-size: 12px
 			font-weight: 100
 			&:last-child
@@ -187,7 +183,7 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
 	height: 20px
 	+clearfix
 	color: $m3c-text
-	background: $m3c-bg
+	background: url(/images/nav_bg.png) repeat
 	font-size: 9px
 	font-weight: 200
 	text-transform: uppercase

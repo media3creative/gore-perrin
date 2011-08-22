@@ -60,9 +60,9 @@ table {
 
 .bg-gradient-primary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#bcdd8e), to(#8dc63f));
+  background: -webkit-gradient(linear, left top, left bottom, from(#58a7e6), to(#1c75bc));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #bcdd8e, #8dc63f);
+  background: -moz-linear-gradient(top, #58a7e6, #1c75bc);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary-light, endColorstr=$primary);
   /* For Internet Explorer 8 */
@@ -71,9 +71,9 @@ table {
 
 .bg-gradient-reverse {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#bcdd8e));
+  background: -webkit-gradient(linear, left top, left bottom, from(#1c75bc), to(#58a7e6));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #8dc63f, #bcdd8e);
+  background: -moz-linear-gradient(top, #1c75bc, #58a7e6);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primary-light);
   /* For Internet Explorer 8 */
@@ -239,9 +239,9 @@ select, input, textarea {
 
 .bg-gradient-primary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#bcdd8e), to(#8dc63f));
+  background: -webkit-gradient(linear, left top, left bottom, from(#58a7e6), to(#1c75bc));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #bcdd8e, #8dc63f);
+  background: -moz-linear-gradient(top, #58a7e6, #1c75bc);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary-light, endColorstr=$primary);
   /* For Internet Explorer 8 */
@@ -250,9 +250,9 @@ select, input, textarea {
 
 .bg-gradient-reverse {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#bcdd8e));
+  background: -webkit-gradient(linear, left top, left bottom, from(#1c75bc), to(#58a7e6));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #8dc63f, #bcdd8e);
+  background: -moz-linear-gradient(top, #1c75bc, #58a7e6);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primary-light);
   /* For Internet Explorer 8 */
@@ -352,7 +352,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 7px;
 }
 
-.corner-all {
+.corner-all, .page-content {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   -o-border-radius: 7px;
@@ -391,14 +391,14 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   background: white;
 }
 
-.box, .center-container, #header, #header #logo1, #header ul#topnav, .content, .page-content {
+.box, .center-container, #logo1, #topnav, #topnav a, .content, .page-content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.opaque, #header #logo1 a:hover, .page-content .page-body {
+.opaque, #logo1 a:hover {
   opacity: 0.75;
   filter: alpha(opacity=75);
 }
@@ -440,9 +440,9 @@ b {
 
 .bg-gradient-primary {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#bcdd8e), to(#8dc63f));
+  background: -webkit-gradient(linear, left top, left bottom, from(#58a7e6), to(#1c75bc));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #bcdd8e, #8dc63f);
+  background: -moz-linear-gradient(top, #58a7e6, #1c75bc);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary-light, endColorstr=$primary);
   /* For Internet Explorer 8 */
@@ -451,9 +451,9 @@ b {
 
 .bg-gradient-reverse {
   /* For WebKit (Safari, Google Chrome etc) */
-  background: -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#bcdd8e));
+  background: -webkit-gradient(linear, left top, left bottom, from(#1c75bc), to(#58a7e6));
   /* For Mozilla/Gecko (Firefox etc) */
-  background: -moz-linear-gradient(top, #8dc63f, #bcdd8e);
+  background: -moz-linear-gradient(top, #1c75bc, #58a7e6);
   /* For Internet Explorer 5.5 - 7 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primary-light);
   /* For Internet Explorer 8 */
@@ -553,7 +553,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 7px;
 }
 
-.corner-all {
+.corner-all, .page-content {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   -o-border-radius: 7px;
@@ -1334,20 +1334,7 @@ body {
   background: transparent;
 }
 
-#one.bg1 {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: url(/images/bg_1.jpg) no-repeat top center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#two.bg1 {
+#bg1.bg1 {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -1360,7 +1347,20 @@ body {
   background-size: cover;
 }
 
-#four.bg1 {
+#bg2.bg1 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(/images/bg_1.jpg) no-repeat top center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg4.bg1 {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -1373,7 +1373,7 @@ body {
   background-size: cover;
 }
 
-#five.bg1 {
+#bg5.bg1 {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -1386,106 +1386,97 @@ body {
   background-size: cover;
 }
 
-#header {
-  width: 100%;
-  height: 130px;
+#logo1 {
+  position: relative;
+  margin: 30px 90px;
+}
+#logo1 a {
   margin: 0;
   padding: 0;
 }
-#header #logo1 {
-  position: absolute;
-  top: 30px;
-  left: 90px;
-  margin: 0;
-}
-#header #logo1 a {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-#header #logo1 a img {
-  width: 200px;
-  height: 100px;
+#logo1 a img {
+  width: 355px;
+  height: 80px;
   margin: 0;
   padding: 0;
   border: 0;
   background: transparent;
 }
-#header ul#topnav {
-  position: absolute;
-  right: 0;
-  top: 60px;
-  width: 600px;
-  margin: 0;
-  padding: 15px;
-  background: black;
-  border-left: 7px solid #8dc63f;
+
+#topnav {
+  position: relative;
+  width: 110px;
+  margin: 30px 0 30px 110px;
+  z-index: 22;
 }
-#header ul#topnav li {
-  display: inline;
-}
-#header ul#topnav li a {
+#topnav a {
   font-family: "EmbedFont-1";
-  display: inline;
-  margin: 0 10px;
-  padding: 5px;
+  display: block;
+  margin: 4px 0;
+  padding: 6px 0 6px 10px;
   color: white;
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 200;
   text-transform: uppercase;
-}
-#header ul#topnav li a:hover {
-  color: #8dc63f;
   text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  border-left: 10px solid transparent;
+}
+#topnav a:hover {
+  color: white;
+  border-left: 10px solid #1c75bc;
+  background: black;
 }
 
 body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a#three {
-  color: #8dc63f !important;
+  color: #1c75bc !important;
   text-decoration: none !important;
+  background: black;
+  border-left: 10px solid #1c75bc;
 }
 
 .content {
   position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0 0 30px 0;
+  width: 600px;
+  margin: -160px 0 40px 220px;
+  padding: 0;
 }
 
 .page-content {
   position: relative;
   left: 0;
-  width: 550px;
+  width: 600px;
   margin: 0;
-  padding: 0;
-  padding-top: 100px;
-  background: transparent;
+  padding: 15px 25px;
+  background: url(/images/nav_bg.png) repeat;
+  border: 1px solid #555555;
 }
 .page-content .page-title {
   position: relative;
   margin: 0;
-  padding: 0 30px 1px 90px;
+  padding: 0;
   color: black;
-  background: transparent;
 }
 .page-content .page-title h1 {
   position: relative;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
   color: white;
   font-family: "EmbedFont-1";
   font-size: 32px;
+  text-transform: uppercase;
   text-shadow: 2px 2px 5px black;
   z-index: 11;
 }
 .page-content .page-body {
   position: relative;
   margin: 0;
-  padding: 10px 30px 10px 90px;
-  background: #8dc63f;
+  padding: 0;
 }
 .page-content .page-body p {
   margin: 0 0 1em 0;
   padding: 0;
-  color: black;
+  color: white;
   font-size: 12px;
   font-weight: 100;
 }
@@ -1502,7 +1493,7 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   overflow: hidden;
   *zoom: 1;
   color: #efefef;
-  background: black;
+  background: url(/images/nav_bg.png) repeat;
   font-size: 9px;
   font-weight: 200;
   text-transform: uppercase;
@@ -1532,7 +1523,7 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   color: #efefef;
 }
 .m3c-bar a {
-  color: #8dc63f;
+  color: #1c75bc;
   text-decoration: none;
 }
 .m3c-bar a:hover {
