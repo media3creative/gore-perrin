@@ -1473,6 +1473,15 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   margin: 0;
   padding: 0;
 }
+.page-content .page-body h2 {
+  padding-left: 0.5em;
+  color: #aaaaaa;
+  font-family: "EmbedFont-1";
+  font-size: 15px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+  border-left: 3px solid #1c75bc;
+}
 .page-content .page-body p {
   margin: 0 0 1em 0;
   padding: 0;
