@@ -404,7 +404,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 }
 
 .contact-form {
-  overflow: hidden;
+  overflow: auto;
   margin-bottom: -23px;
 }
 .contact-form iframe {
@@ -414,8 +414,19 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 }
 
 b {
-  color: black !important;
   font-weight: bold;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+span.small {
+  font-size: 80%;
 }
 
 .font-helvetica, body, .m3c-bar {
@@ -1481,6 +1492,18 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   text-transform: uppercase;
   text-shadow: 1px 1px 1px black;
   border-left: 3px solid #1c75bc;
+}
+.page-content .page-body h3 {
+  font-family: "EmbedFont-1";
+  margin: 0 0 0 0;
+  padding: 0;
+  color: white;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 18px;
+}
+.page-content .page-body h3:last-child {
+  margin-bottom: 0;
 }
 .page-content .page-body p {
   margin: 0 0 1em 0;
