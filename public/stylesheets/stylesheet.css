@@ -365,16 +365,16 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 7px;
 }
 
-.clearfix, .content, .page-content {
+.clearfix, .content, .page-content, .profile {
   zoom: 1;
 }
-.clearfix:before, .content:before, .page-content:before {
+.clearfix:before, .content:before, .page-content:before, .profile:before {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after, .content:after, .page-content:after {
+.clearfix:after, .content:after, .page-content:after, .profile:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -391,7 +391,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   background: white;
 }
 
-.box, .center-container, #logo1, #topnav, #topnav a, .content, .page-content {
+.box, .center-container, #logo1, #topnav, #topnav a, .content, .page-content, .profile {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1511,9 +1511,27 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   color: white;
   font-size: 12px;
   font-weight: 100;
+  text-align: justify;
 }
 .page-content .page-body p:last-child {
   margin-bottom: 0;
+}
+
+.profile {
+  position: relative;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+.profile img {
+  position: relative;
+  display: inline;
+  float: right;
+  clear: none;
+  width: 125px;
+  height: 150px;
+  margin: 0 0 7px 20px;
+  background: #990000;
+  border: 2px solid black;
 }
 
 .m3c-bar {

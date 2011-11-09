@@ -189,9 +189,27 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
 			color: #fff
 			font-size: 12px
 			font-weight: 100
+			text-align: justify
 			&:last-child
 				margin-bottom: 0
-			
+.profile
+	@extend .box
+	@extend .clearfix
+	position: relative
+	margin: 0 0 ($v-gap) 0
+	padding: 0
+	img
+		position: relative
+		+float-right
+		clear: none
+		width: 125px
+		height: 150px
+		margin: 0 0 7px 20px
+		background: #900
+		border: 2px solid #000
+	
+	
+	
 .m3c-bar			
 	@extend .font-helvetica
 	position: fixed
