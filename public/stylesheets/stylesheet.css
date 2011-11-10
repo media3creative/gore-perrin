@@ -425,8 +425,8 @@ b {
   text-align: center;
 }
 
-span.small {
-  font-size: 80%;
+.small {
+  font-size: 80% !important;
 }
 
 .font-helvetica, body, .m3c-bar {
@@ -1399,7 +1399,7 @@ body {
 
 #logo1 {
   position: relative;
-  margin: 30px 90px;
+  margin: 30px 240px;
 }
 #logo1 a {
   margin: 0;
@@ -1489,7 +1489,6 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
   color: #aaaaaa;
   font-family: "EmbedFont-1";
   font-size: 15px;
-  text-transform: uppercase;
   text-shadow: 1px 1px 1px black;
   border-left: 3px solid #1c75bc;
 }
